@@ -1,7 +1,15 @@
+
 interface Slide3 {
     setPage: (value: number) => void;
   }
-  const OnbordingSlide3: React.FC<Slide3> = ({ setPage }) => {
+  const OnbordingSlide3: React.FC<Slide3> = ({ setPage }) 
+import { useNavigate } from "react-router";
+interface Slide3 {
+    setPage: (value: number) => void;
+  }
+  const OnbordingSlide3: React.FC<Slide3> = () => {
+    const navigate = useNavigate();
+
     return (
       <div className="w-full h-screen flex flex-col items-center justify-centerp">
         <div className="w-full h-[60%]">
@@ -17,10 +25,10 @@ interface Slide3 {
               <div className="w-8 h-1 bg-black opacity-50"></div>
               <div className="w-8 h-1 bg-black"></div>
             </div>
-            <button
-              onClick={() => setPage(0)}
-              className="bg-black hover:bg-gray-800 rounded-full text-white w-[90%] py-3 fixed bottom-14 left-[5%]"
-            >
+            <button>
+          
+             onClick={() => navigate('/login')} className="bg-black hover:bg-gray-800 rounded-full text-white w-full py-3 absolute bottom-8">
+
               Get Started
             </button>
           </div>

@@ -1,13 +1,18 @@
-import Page1 from "./pages/Page1";
+
+import { Route, Routes } from "react-router";
+import LoginPage from "./components/LoginPage";
+import SignupPage from "./components/SignupPage";
+
 
 function App() {
-
+ 
 
   return (
-    <div className="overflow-hidden">
-    <Page1/>
-  </div>
+    <Routes>
+    <Route path="/login" element={<LoginPage/>} />
+    <Route path="/sign-up" element={<SignupPage/>} />
+</Routes>
   );
 }
-
+ 
 export default App
